@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/topics/settings/
 """
 
-import dj_database_url
+# import dj_database_url
 import os
 from django.test.runner import DiscoverRunner
 from pathlib import Path
@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "response_app",
-    'rest_framework'
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +67,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "hngreponse.urls"
+ROOT_URLCONF = "hngresponse.urls"
 
 TEMPLATES = [
     {
@@ -85,7 +85,7 @@ TEMPLATES = [
     }
 ]
 
-WSGI_APPLICATION = "hngreponse.wsgi.application"
+WSGI_APPLICATION = "hngresponse.wsgi.application"
 
 
 # Database
@@ -157,7 +157,7 @@ class HerokuDiscoverRunner(DiscoverRunner):
 
 # Use HerokuDiscoverRunner on Heroku CI
 if "CI" in os.environ:
-    TEST_RUNNER = "hngreponse.settings.HerokuDiscoverRunner"
+    TEST_RUNNER = "hngresponse.settings.HerokuDiscoverRunner"
 
 
 # Default primary key field type
