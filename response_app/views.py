@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 # Create your views here.
 response = {
-    'SlackUsername': 'Jacob Peter',
+    'slackUsername': 'Jacob Peter',
     'backend': True,
     'age': 24,
     'bio': 'I am from ogun state,I am a backend developer'
