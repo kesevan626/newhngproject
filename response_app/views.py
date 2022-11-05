@@ -28,7 +28,7 @@ def performOperation(request):
             operation = '+'
         elif '*' in operation_type or 'multiply' in operation_type or 'multiplication' in operation_type :
             operation = '*'
-        elif '-' in operation_type or 'substrate' in operation_type or 'minus' in operation_type:
+        elif '-' in operation_type or 'substrate' in operation_type or 'minus' in operation_type or 'subtraction' in operation_type:
             operation = '-'    
 
         if x == "" or x == None  and y == "" or y == None:
