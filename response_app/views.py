@@ -25,11 +25,11 @@ def performOperation(request):
         y = request.data.get('y' or 'Y')
 
         if '+' in operation_type or 'plus' in operation_type or 'add' in operation_type or 'addition' in operation_type:
-            operation = 'add'
+            operation = '+'
         elif '*' in operation_type or 'multiply' in operation_type or 'multiplication' in operation_type :
-            operation = 'multiply'
+            operation = '*'
         elif '-' in operation_type or 'substrate' in operation_type or 'minus' in operation_type:
-            operation = 'substrate'    
+            operation = '-'    
 
         if x == "" or x == None  and y == "" or y == None:
             arr = operation_type.split(' ')
@@ -40,11 +40,11 @@ def performOperation(request):
             no_list.append(int(x))
             no_list.append(int(y))
 
-        if operation == "add":
+        if operation == "+":
             result = sum(no_list)
-        elif operation == "substrate":
+        elif operation == "-":
             result = no_list[0] - no_list[1]
-        elif operation == "multiply":
+        elif operation == "*":
             result = no_list[0] * no_list[1]
 
         response = {
